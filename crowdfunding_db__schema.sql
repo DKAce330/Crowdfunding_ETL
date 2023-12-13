@@ -10,21 +10,18 @@ CREATE TABLE Contacts (
     FirstName VARCHAR(150) NOT NULL,
     LastName VARCHAR(150) NOT NULL,
     Email VARCHAR(150) NOT NULL,
-    COMMENT 'Stores contact information including first and last names, and email addresses.'
 );
 
 -- Definition of the Category table
 CREATE TABLE Category (
     CategoryID VARCHAR(150) NOT NULL PRIMARY KEY,
     CategoryName VARCHAR(150) NOT NULL,
-    COMMENT 'Holds different categories identified by CategoryID and name.'
 );
 
 -- Definition of the Subcategory table
 CREATE TABLE Subcategory (
     SubcategoryID VARCHAR(150) NOT NULL PRIMARY KEY,
     SubcategoryName VARCHAR(150) NOT NULL,
-    COMMENT 'Contains subcategories related to the main categories.'
 );
 
 -- Definition of the Campaign table
@@ -43,7 +40,6 @@ CREATE TABLE Campaign (
     EndDate DATE NOT NULL,
     CategoryID VARCHAR(300) NOT NULL REFERENCES Category(CategoryID),
     SubcategoryID VARCHAR(300) NOT NULL REFERENCES Subcategory(SubcategoryID),
-    COMMENT 'Details of each campaign including links to contact, category, and subcategory.'
 );
 
 -- Queries to view data in each table
