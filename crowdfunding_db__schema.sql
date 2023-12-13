@@ -9,19 +9,19 @@ CREATE TABLE Contacts (
     ContactID INT NOT NULL PRIMARY KEY,
     FirstName VARCHAR(150) NOT NULL,
     LastName VARCHAR(150) NOT NULL,
-    Email VARCHAR(150) NOT NULL,
+    Email VARCHAR(150) NOT NULL
 );
 
 -- Definition of the Category table
 CREATE TABLE Category (
     CategoryID VARCHAR(150) NOT NULL PRIMARY KEY,
-    CategoryName VARCHAR(150) NOT NULL,
+    CategoryName VARCHAR(150) NOT NULL
 );
 
 -- Definition of the Subcategory table
 CREATE TABLE Subcategory (
     SubcategoryID VARCHAR(150) NOT NULL PRIMARY KEY,
-    SubcategoryName VARCHAR(150) NOT NULL,
+    SubcategoryName VARCHAR(150) NOT NULL
 );
 
 -- Definition of the Campaign table
@@ -39,7 +39,7 @@ CREATE TABLE Campaign (
     LaunchedDate DATE NOT NULL,
     EndDate DATE NOT NULL,
     CategoryID VARCHAR(300) NOT NULL REFERENCES Category(CategoryID),
-    SubcategoryID VARCHAR(300) NOT NULL REFERENCES Subcategory(SubcategoryID),
+    SubcategoryID VARCHAR(300) NOT NULL REFERENCES Subcategory(SubcategoryID)
 );
 
 -- Queries to view data in each table
